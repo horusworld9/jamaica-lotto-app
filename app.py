@@ -5,10 +5,8 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import TimeSeriesSplit
 
 st.set_page_config(page_title="Jamaica Lotto Predictor", layout="centered")
-
 st.title("🎯 Jamaica Lotto Predictor")
 
-# Simulated data — replace later with real draw history
 np.random.seed(42)
 data = [np.random.choice(range(1, 39), size=6, replace=False).tolist() for _ in range(50)]
 bonus = [np.random.choice([n for n in range(1, 39) if n not in row]) for row in data]
